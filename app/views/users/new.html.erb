@@ -1,1 +1,23 @@
-<h1>New User Page</h1>
+<!-- <form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">username:</label><br>
+  <input type="text" id="username" name="user[username]" placeholder="username"><br>
+  <label for="email">email:</label><br>
+  <input type="email" id="email" name="user[email]" placeholder="xyz@example.com"><br>
+  <label for="password">password</label><br>
+  <input type="password" id="password" name="user[password]"><br><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+
+<h1>New User Form</h1>
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :username %><br>
+  <%= form.text_field :username, value: "test" %><br>
+  <%= form.label :email %><br>
+  <%= form.email_field :email, placeholder: "xyz@example.com" %><br>
+  <%= form.label :password%><br>
+  <%= form.password_field :password %><br><br>
+  <%= form.submit "Create" %><br>
+<% end %>
