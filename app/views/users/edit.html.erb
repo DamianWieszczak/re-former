@@ -1,4 +1,4 @@
-<!-- <form action="/users" method="post" accept-charset="UTF-8">
+<!-- <form action="/users/:id/edit" method="patch" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="username">username:</label><br>
   <input type="text" id="username" name="user[username]" placeholder="username"><br>
@@ -10,6 +10,6 @@
 </form> -->
 
 
-<h1>New User Form</h1>
+<h1>Edit User Form</h1>
 
-<%= render "user", user: @user%>
+<%= render "user", user: @user %>
